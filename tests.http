@@ -1,32 +1,22 @@
 @host = localhost
 @port = 7071
-
-### Trigger the *evaluate_kid_friendliness* function with query parameter
-
-GET http://{{host}}:{{port}}/api/evaluate_kid_friendliness?location=Jackson+Heights,+Queens,+NY
-
-### Trigger the *evaluate_kid_friendliness* function with JSON body
-
-POST http://{{host}}:{{port}}/api/evaluate_kid_friendliness
-
-{
-    "location": "downtown Oklahoma City"
-}
+@location = "downtown Toronto"
+@property_type = "retail"
 
 ###
 POST http://{{host}}:{{port}}/api/generate_market_research
 
 {
-    "location": "downtown Oklahoma City",
-    "property_type": "retail"
+    "location": {{location}},
+    "property_type": {{property_type}}
 }
 
 ###
 POST http://{{host}}:{{port}}/api/generate_landing_page_content
 
 {
-    "location": "downtown Oklahoma City",
-    "property_type": "retail",
+    "location": {{location}},
+    "property_type": {{property_type}}
     "market_data": "Downtown Oklahoma City is experiencing a surge in retail leasing due to its growing population and vibrant economy. There are several ways to get to and from downtown Oklahoma City. You can use public transportation such as the city's bus service, EMBARK, or the OKC Streetcar system. If you prefer driving, you can use major highways like I-40, I-35, and I-235. For longer distances, the Will Rogers World Airport is just a short drive away. Alternatively, you can use ride-sharing services like Uber or Lyft, or rent a bike or scooter from one of the many sharing services in the city. Popular neighborhoods in downtown Oklahoma City for retail leasing include Bricktown, Automobile Alley, and the Plaza District, all of which are known for their bustling commercial activity and foot traffic. Downtown Oklahoma City is a vibrant and bustling area that serves as the city's business and entertainment hub. It is home to a variety of attractions, including the Bricktown entertainment district, the Oklahoma City Museum of Art, and the Myriad Botanical Gardens. The area is also known for its thriving retail leasing market, with popular neighborhoods such as Bricktown, Automobile Alley, and the Plaza District attracting a diverse range of businesses. With its rich history, dynamic economy, and a wide array of cultural and recreational opportunities, downtown Oklahoma City offers a unique blend of old and new that continues to draw residents and visitors alike. As an AI, I don't have real-time data or the ability to predict future market trends. However, retail rents in any area, including downtown Oklahoma City, can be influenced by several factors such as demand, economic growth, and the overall health of the retail industry. For the most accurate information, it would be best to consult recent market research or speak with a local real estate expert. Explore retail leasing opportunities in downtown Oklahoma City. Discover vibrant neighborhoods like Bricktown, Automobile Alley, and the Plaza District, perfect for businesses looking to thrive in a bustling urban environment. Discover prime retail leasing opportunities in downtown Oklahoma City. Join the thriving business community in popular areas like Bricktown, Automobile Alley, and the Plaza District. Ideal for businesses seeking growth in a dynamic urban setting."
 }
 
