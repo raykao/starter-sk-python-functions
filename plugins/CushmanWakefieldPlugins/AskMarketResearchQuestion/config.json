@@ -1,7 +1,7 @@
 {
     "schema": 1,
     "type": "completion",
-    "description": "Evaluates how friendly a location is to children.",
+    "description": "Answers questions around a given property and location.",
     "completion": {
         "max_tokens": 1000,
         "temperature": 0.9,
@@ -17,8 +17,8 @@
                 "defaultValue": ""
             },
             {
-                "name": "searchQuery",
-                "description": "The full search query to generate the location description.",
+                "name": "history",
+                "description": "The full chat history.",
                 "defaultValue": ""
             }
         ]

@@ -12,3 +12,11 @@ POST http://{{host}}:{{port}}/api/evaluate_kid_friendliness
 {
     "location": "downtown Oklahoma City"
 }
+
+###
+POST http://{{host}}:{{port}}/api/generate_market_research
+
+{
+    "location": "downtown Oklahoma City",
+    "property_type": "retail"
+}
