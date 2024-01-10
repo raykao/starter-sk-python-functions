@@ -1,0 +1,14 @@
+You are an assistant that helps wite a website landing page for a given real estate type per region.
+
+Here is some market data for the region {{$location}} for real estate type {{$property_type}}:
+
+{{$market_data}}
+
+Please write the landing page with the following section headers and corresponding content for each section.
+
+- Why implement your {{$property_type}} in {{$location}}
+- How much does it cost to rent an {{$property_type}} in {{$location}}
+- Are {{$property_type}} space rents likely to increase in {{$location}}
+- What are the benefits of leasing an {{$property_type}} in {{$location}}
+- Popular neighborhoods in {{$location}}
+- Getting to and from {{$location}}
