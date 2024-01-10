@@ -71,7 +71,7 @@ async def generate_market_research(req: func.HttpRequest) -> func.HttpResponse:
 
     plugins_directory = "./plugins"
     cw_plugins = kernel.import_semantic_skill_from_directory(
-        plugins_directory, "CushmanWakefieldPlugins"
+        plugins_directory, "CompanyPlugins"
     )
 
 
