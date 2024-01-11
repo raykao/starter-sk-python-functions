@@ -82,7 +82,7 @@ async def generate_market_research(req: func.HttpRequest) -> func.HttpResponse:
         context["history"] = history
         context["input"] = question
         answer = await kernel.run_async(
-            cw_plugins["AskMarketResearchQuestion"], 
+            cw_plugins["GenerateMarketResearch"], 
             input_vars = context
         )
 
