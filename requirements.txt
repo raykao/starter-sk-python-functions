@@ -4,3 +4,6 @@
 
 azure-functions
 semantic-kernel
+flask
+aiohttp
+asyncio

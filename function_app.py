@@ -92,7 +92,7 @@ async def generate_market_research(req: func.HttpRequest) -> func.HttpResponse:
             question: answer.result
         })
 
-        market_research += answer.result + "\n"
+        market_research += answer.result
 
     print(json.dumps(answers))
 
@@ -103,7 +103,7 @@ async def generate_market_research(req: func.HttpRequest) -> func.HttpResponse:
 
     return func.HttpResponse(
         market_research,
-        mimetype="application/text",
+        mimetype="text/plain",
     )
 
 
@@ -186,7 +186,9 @@ async def generate_landing_page_content(req: func.HttpRequest) -> func.HttpRespo
     print(generated_landing_page_content.result)
 
     return func.HttpResponse(
-        json.dumps(generated_landing_page_content.result),
+        json.dumps({
+            "content": generated_landing_page_content.result
+        }),
         mimetype="application/json",
     )
 
